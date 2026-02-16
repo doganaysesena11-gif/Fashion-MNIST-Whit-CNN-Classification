@@ -82,7 +82,7 @@ for i in range(9):
     plt.grid(False)
     plt.imshow(x_test[i].reshape(28,28), cmap=plt.cm.binary)
     plt.xlabel(class_names[y_test[i]])
-plt.show()
+plt.show()**
 
 
 This will display a 3x3 grid of test images along with their true labels.
