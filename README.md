@@ -33,11 +33,11 @@ Ankle boot
 Images were normalized by scaling pixel values to the range [0,1].
 
 ## Libraries Used
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
-import matplotlib.pyplot as plt
-from sklearn.metrics import accuracy_score
+  import tensorflow as tf
+  from tensorflow.keras.models import Sequential
+  from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+  import matplotlib.pyplot as plt
+  from sklearn.metrics import accuracy_score
 
 ## Model Architecture
 
@@ -70,19 +70,4 @@ Test Accuracy: ~91.7%
 
 The model performs well in classifying fashion items, achieving over 91% accuracy on unseen test data.
 
-## Sample Predictions
 
-The following code can be used to visualize some test images with their predicted labels:
-
-python** plt.figure(figsize=(8,8))
-for i in range(9):
-    plt.subplot(3,3,i+1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.grid(False)
-    plt.imshow(x_test[i].reshape(28,28), cmap=plt.cm.binary)
-    plt.xlabel(class_names[y_test[i]])
-plt.show()**
-
-
-This will display a 3x3 grid of test images along with their true labels.
