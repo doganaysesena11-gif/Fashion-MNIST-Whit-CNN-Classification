@@ -1,23 +1,34 @@
 ## Fashion MNIST Classification with CNN
+
 This project demonstrates how to build a Convolutional Neural Network (CNN) to classify images from the Fashion MNIST dataset using TensorFlow and Keras. The dataset contains 70,000 grayscale images of 10 clothing categories, each of size 28x28 pixels.
 
 ## Dataset
 
 Source: TensorFlow Keras datasets (tf.keras.datasets.fashion_mnist)
-Train/Test split: 60,000 training images and 10,000 test images
+
+Train/Test Split: 60,000 training images and 10,000 test images
 
 ## Classes:
 
-1)T-shirt/top
-2)Trouser
-3)Pullover
-4)Dress
-5)Coat
-6)Sandal
-7)Shirt
-8)Sneaker
-9)Bag
-10)Ankle boot
+T-shirt/top
+
+Trouser
+
+Pullover
+
+Dress
+
+Coat
+
+Sandal
+
+Shirt
+
+Sneaker
+
+Bag
+
+Ankle boot
 
 Images were normalized by scaling pixel values to the range [0,1].
 
@@ -30,7 +41,8 @@ from sklearn.metrics import accuracy_score
 
 ## Model Architecture
 
-The CNN model consists of:
+The CNN model consists of the following layers:
+
 Conv2D Layer: 32 filters, 3x3 kernel, ReLU activation, padding='same', input shape (28,28,1)
 MaxPooling2D Layer: 2x2 pool size
 Conv2D Layer: 64 filters, 3x3 kernel, ReLU activation, padding='same'
@@ -41,18 +53,36 @@ Dropout Layer: rate 0.5
 Dense Output Layer: 10 units, Softmax activation
 
 ## Training
-
 Optimizer: Adam
 Loss Function: Sparse Categorical Crossentropy
 Metrics: Accuracy
 Batch Size: 32
 Epochs: 10
 
+
 The model was trained on the training dataset with validation using the test dataset.
 
 ## Results
 
 Training Accuracy: ~91.8%
+
 Test Accuracy: ~91.7%
 
 The model performs well in classifying fashion items, achieving over 91% accuracy on unseen test data.
+
+## Sample Predictions
+
+The following code can be used to visualize some test images with their predicted labels:
+
+plt.figure(figsize=(8,8))
+for i in range(9):
+    plt.subplot(3,3,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(x_test[i].reshape(28,28), cmap=plt.cm.binary)
+    plt.xlabel(class_names[y_test[i]])
+plt.show()
+
+
+This will display a 3x3 grid of test images along with their true labels.
