@@ -48,19 +48,29 @@ Images were normalized by scaling pixel values to the range [0,1].
 The CNN model consists of the following layers:
 
 Conv2D Layer: 32 filters, 3x3 kernel, ReLU activation, padding='same', input shape (28,28,1)
+
 MaxPooling2D Layer: 2x2 pool size
+
 Conv2D Layer: 64 filters, 3x3 kernel, ReLU activation, padding='same'
 MaxPooling2D Layer: 2x2 pool size
+
 Flatten Layer
+
 Dense Layer: 64 units, ReLU activation
+
 Dropout Layer: rate 0.5
+
 Dense Output Layer: 10 units, Softmax activation
 
 ## Training
 Optimizer: Adam
+
 Loss Function: Sparse Categorical Crossentropy
+
 Metrics: Accuracy
+
 Batch Size: 32
+
 Epochs: 10
 
 
