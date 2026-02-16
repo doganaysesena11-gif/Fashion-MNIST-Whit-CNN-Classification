@@ -34,9 +34,13 @@ Images were normalized by scaling pixel values to the range [0,1].
 
 ## Libraries Used
   import tensorflow as tf
+  
   from tensorflow.keras.models import Sequential
+  
   from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+  
   import matplotlib.pyplot as plt
+  
   from sklearn.metrics import accuracy_score
 
 ## Model Architecture
