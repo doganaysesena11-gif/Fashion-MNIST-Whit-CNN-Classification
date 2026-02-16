@@ -74,7 +74,7 @@ The model performs well in classifying fashion items, achieving over 91% accurac
 
 The following code can be used to visualize some test images with their predicted labels:
 
-plt.figure(figsize=(8,8))
+python** plt.figure(figsize=(8,8))
 for i in range(9):
     plt.subplot(3,3,i+1)
     plt.xticks([])
